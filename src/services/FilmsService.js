@@ -10,7 +10,7 @@ export default class FilmsService {
     return this.http.request('films/')
   }
 
-  getFilmeById(id) {
-    return
+  async getFilmeById(episode_id) {
+    return this.http.request('films/' + episode_id)
   }
 }
