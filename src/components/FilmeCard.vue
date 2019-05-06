@@ -1,9 +1,11 @@
 <template>
   <div class="filme-card">
-    <img src="" alt="">
-    <h1> {{ title }} </h1>
-    <h4> {{ release_date }} </h4>
-    <router-link :to="{ name: 'FilmeDetalhes', params: { id: episode_id } }">  Detalhes </router-link>
+    <div class="wrapper-imagem">
+      <img :src="getFilmeImagem(episode_id)" :alt="title">
+    </div>
+    <h1 class="filme-titulo"> {{ title }} </h1>
+    <span class="filme-lancamento"> Lançamento: {{ release_date }} </span>
+    <router-link class="filme-detalhes" :to="{ name: 'FilmeDetalhes', params: { id: episode_id } }">  Detalhes </router-link>
   </div>
 </template>
 
@@ -11,7 +13,66 @@
 
 export default {
   name: 'FilmeCard',
-  props: ['episode_id', 'image_src', 'title', 'release_date']
+  props: ['episode_id', 'title', 'release_date'],
+  methods: {
+    getFilmeImagem(episodio) {
+      return require('@/assets/covers/' + episodio + '.jpeg')
+    }
+  }
 }
 
 </script>
+
+<style lang="scss">
+
+  .filme-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    max-width: 350px;
+    margin: auto auto 20px;
+    border-radius: 10px;
+    background-color: #272626;
+
+    .wrapper-imagem {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      img {
+        border-radius: 5px;
+        width: 100%;
+      }
+    }
+
+    .filme-titulo {
+      color: #dddddd;
+      font-size: 20px;
+      text-align: center;
+    }
+
+    .filme-lancamento {
+      color: #edec51;
+      font-size: 12px;
+      font-weight: bold;
+    }
+
+    .filme-detalhes {
+      margin-top: 10px;
+      padding: 10px 25px;
+      font-size: 12px;
+      font-weight: bold;
+      color: #272626;
+      text-decoration: none;
+      background-color: white;
+      border-radius: 25px;
+    }
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+</style>

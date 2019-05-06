@@ -1,6 +1,7 @@
 <template>
   <div class="home">
-    <input v-model="filmeSelecionado" type="text">
+    <img class="logo" src="@/assets/star-wars.png" alt="Star Wars">
+    <input v-model="filmeSelecionado" class="filme-filtro" type="text">
     <filme-card v-for="filme in filmes"
               :episode_id="filme.episode_id"
               :title="filme.title"
@@ -36,3 +37,22 @@ export default {
   }
 }
 </script>
+
+<style lang="scss">
+
+  .home {
+    margin: auto;
+
+    .logo {
+      display: block;
+      margin: auto auto 25px;
+      max-width: 300px;
+    }
+
+    .filme-filtro {
+      margin: auto auto 20px;
+      width: 100%;
+    }
+  }
+
+</style>
