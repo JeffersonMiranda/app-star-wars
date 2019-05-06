@@ -10,4 +10,10 @@
 
 <style lang="scss">
 
+  body {
+    background-color: #151515;
+    padding: 0 20px;
+    font-family: DIN, Helvetica, Arial, sans-serif;
+  }
+
 </style>
