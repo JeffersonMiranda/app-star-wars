@@ -36,7 +36,7 @@ export default {
       this.filme = response.data
       this.filmeImagem = service.getFilmeImagemDetalhe(this.filme.episode_id)
     } catch(error) {
-      console.log(error)
+      alert('Não foi possível conectar ao servidor, tente mais tarde!')
     }
   }
 }

@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <header class="app-header" :class="{centralizado: !isPaginaDetalhes()}">
-      <router-link class="return-btn" :to="{ name: 'home' }" v-if="isPaginaDetalhes()"> <img src="@/assets/return.png" alt="Retornar"> </router-link>
+      <router-link class="return-btn" :to="{ name: 'FilmesLista' }" v-if="isPaginaDetalhes()"> <img src="@/assets/return.png" alt="Retornar"> </router-link>
       <img class="logo" src="@/assets/star-wars.png" alt="Star Wars">
     </header>
     <router-view/>

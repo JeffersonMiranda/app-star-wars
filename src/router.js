@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Home from './views/Home'
+import FilmesLista from './views/FilmesLista'
 import FilmeDetalhes from './views/FilmeDetalhes'
 
 Vue.use(Router)
@@ -11,8 +11,8 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'home',
-      component: Home
+      name: 'FilmesLista',
+      component: FilmesLista
     },
     {
       path: '/filme-detalhes/:id',
