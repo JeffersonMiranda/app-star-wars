@@ -1,9 +1,9 @@
 <template>
   <div class="home">
-    <input v-model="filmeSelecionado" class="filme-filtro" type="text">
+    <input v-model="filmeSelecionado" class="filme-filtro" type="text" placeholder="Pesquise por título">
     <div class="filmes-cards">
 
-      <filme-card v-for="filme in filmes"
+      <filme-card v-for="filme in filmesFiltrados"
               :episode_id="filme.episode_id"
               :title="filme.title"
               :release_date="filme.release_date"/>
@@ -25,6 +25,16 @@ export default {
     return {
       filmeSelecionado: null,
       filmes: []
+    }
+  },
+  computed: {
+    filmesFiltrados() {
+      if (this.filmeSelecionado) {
+        var filtro = this.filmeSelecionado.toLowerCase()
+        return this.filmes.filter(filme => filme.title.toLowerCase().includes(filtro))
+      } else {
+        return this.filmes
+      }
     }
   },
   async created() {
