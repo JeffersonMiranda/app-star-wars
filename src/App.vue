@@ -20,36 +20,31 @@ export default {
 
 </script>
 
-<style lang="scss">
+<style lang="sass">
 
-  body {
-    background-color: #151515;
-    padding: 20px;
-    font-family: DIN, Helvetica, Arial, sans-serif;
+body
+  background-color: #151515
+  padding: 20px
+  font-family: DIN, Helvetica, Arial, sans-serif
 
-    .app-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 25px;
+  .app-header
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin-bottom: 25px
 
-      .return-btn {
+    .return-btn
 
-        img {
-          width: 60px;
-          height: 60px;
-        }
-      }
+      img
+        width: 60px
+        height: 60px
 
-      .logo {
-        display: block;
-        max-width: 300px;
-      }
+    .logo
+      display: block
+      max-width: 300px
+      margin: auto
 
-      &.centralizado {
-        justify-content: center;
-      }
-    }
-  }
+    &.centralizado
+      justify-content: center
 
 </style>

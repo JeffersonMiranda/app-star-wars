@@ -39,59 +39,48 @@ export default {
 
 </script>
 
-<style lang="scss">
+<style lang="sass">
 
-  .filme-detalhes {
-    color: #aaaaaa;
-    font-weight: bold;
+.filme-detalhes
+  color: #aaaaaa
+  font-weight: bold
 
-    .cor-amarela {
-      color: #edec51;
-    }
+  .cor-amarela
+    color: #edec51
 
-    .filme-imagem {
-      display: block;
-      max-width: 200px;
-      max-height: 300px;
-      margin: auto;
-      border-radius: 10px;
-    }
+  .filme-imagem
+    display: block
+    max-width: 200px
+    max-height: 300px
+    margin: auto
+    border-radius: 10px
 
-    .filme-titulo {
-      text-align: center;
-      font-size: 24px;
-    }
+  .filme-titulo
+    text-align: center
+    font-size: 24px
 
-    .filme-diretor {
-      width: 100%;
-      border-radius: 10px;
-    }
+  .filme-diretor
+    width: 100%
+    border-radius: 10px
 
-    .filme-produtor {
-      width: 100%;
-      border-radius: 10px;
-    }
+  .filme-produtor
+    width: 100%
+    border-radius: 10px
 
-    .filme-lancamento {
-      width: 100%;
-      border-radius: 10px;
-    }
+  .filme-lancamento
+    width: 100%
+    border-radius: 10px
 
-    .filme-quantidade-personagens {
-      width: 100%;
-      border-radius: 10px;
-    }
+  .filme-quantidade-personagens
+    width: 100%
+    border-radius: 10px
 
-    .filme-quantidade-veiculos{
-      width: 100%;
-      border-radius: 10px;
-    }
+  .filme-quantidade-veiculos
+    width: 100%
+    border-radius: 10px
 
-    .filme-quantidade-naves {
-      width: 100%;
-      border-radius: 10px;
-    }
-
-  }
+  .filme-quantidade-naves
+    width: 100%
+    border-radius: 10px
 
 </style>

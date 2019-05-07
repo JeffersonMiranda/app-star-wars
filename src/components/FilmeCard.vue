@@ -23,56 +23,49 @@ export default {
 
 </script>
 
-<style lang="scss">
+<style lang="sass">
 
-  .filme-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 10px;
-    max-width: 320px;
-    margin: auto auto 20px;
-    border-radius: 10px;
-    background-color: #272626;
+.filme-card
+  display: flex
+  flex-direction: column
+  align-items: center
+  padding: 10px
+  max-width: 320px
+  margin: auto auto 20px
+  border-radius: 10px
+  background-color: #272626
 
-    .wrapper-imagem {
-      width: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+  .wrapper-imagem
+    width: 100%
+    display: flex
+    align-items: center
+    justify-content: center
 
-      img {
-        border-radius: 5px;
-        width: 100%;
-      }
-    }
+    img
+      border-radius: 5px
+      width: 100%
 
-    .filme-titulo {
-      color: #dddddd;
-      font-size: 20px;
-      text-align: center;
-    }
+  .filme-titulo
+    color: #dddddd
+    font-size: 20px
+    text-align: center
 
-    .filme-lancamento {
-      color: #edec51;
-      font-size: 12px;
-      font-weight: bold;
-    }
+  .filme-lancamento
+    color: #edec51
+    font-size: 12px
+    font-weight: bold
 
-    .filme-detalhes {
-      margin-top: 10px;
-      padding: 10px 25px;
-      font-size: 12px;
-      font-weight: bold;
-      color: #272626;
-      text-decoration: none;
-      background-color: white;
-      border-radius: 25px;
-    }
+  .filme-detalhes
+    margin-top: 10px
+    padding: 10px 25px
+    font-size: 12px
+    font-weight: bold
+    color: #272626
+    text-decoration: none
+    background-color: white
+    border-radius: 25px
 
-    &:last-of-type {
-      margin-bottom: 0;
-    }
-  }
+  &:last-of-type
+    margin-bottom: 0
 
 </style>

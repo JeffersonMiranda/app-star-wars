@@ -40,22 +40,19 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="sass">
 
-  .home {
-    margin: auto;
+.home
+  margin: auto
 
-    .filme-filtro {
-      display: block;
-      width: 100%;
-      max-width: 400px;
-      margin: auto auto 20px;
-    }
+  .filme-filtro
+    display: block
+    width: 100%
+    max-width: 400px
+    margin: auto auto 20px
 
-    .filmes-cards {
-      display: flex;
-      flex-wrap: wrap;
-    }
-  }
+  .filmes-cards
+    display: flex
+    flex-wrap: wrap
 
 </style>
