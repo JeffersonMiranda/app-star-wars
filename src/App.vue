@@ -27,24 +27,28 @@ body
   padding: 20px
   font-family: DIN, Helvetica, Arial, sans-serif
 
-  .app-header
-    display: flex
-    justify-content: space-between
-    align-items: center
-    margin-bottom: 25px
+  #app
+    max-width: 1200px
+    margin: auto
 
-    .return-btn
+    .app-header
+      display: flex
+      justify-content: space-between
+      align-items: center
+      margin-bottom: 25px
 
-      img
-        width: 60px
-        height: 60px
+      .return-btn
 
-    .logo
-      display: block
-      max-width: 300px
-      margin: auto
+        img
+          width: 60px
+          height: 60px
 
-    &.centralizado
-      justify-content: center
+      .logo
+        display: block
+        max-width: 300px
+        margin: auto
+
+      &.centralizado
+        justify-content: center
 
 </style>
