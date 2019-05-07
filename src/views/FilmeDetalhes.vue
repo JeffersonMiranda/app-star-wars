@@ -5,7 +5,7 @@
     <p class="filme-detalhes"> {{ filme.opening_crawl }} </p>
     <p class="filme-diretor"> Diretor: <span class="cor-amarela"> {{ filme.director }} </span> </p>
     <p class="filme-produtor"> Produtor: <span class="cor-amarela"> {{ filme.producer }} </span> </p>
-    <p class="filme-lancamento"> Lançamento: <span class="cor-amarela"> {{ filme.release_date }} </span> </p>
+    <p class="filme-lancamento"> Lançamento: <span class="cor-amarela"> {{ formatarData(filme.release_date) }} </span> </p>
     <p class="filme-quantidade-personagens"> <span class="cor-amarela"> Personagens: {{ filme.characters.length }} </span> </p>
     <p class="filme-quantidade-planetas"> Planetas: <span class="cor-amarela"> {{ filme.planets.length }} </span> </p>
     <p class="filme-quantidade-naves"> Naves: <span class="cor-amarela"> {{ filme.starships.length }} </span> </p>
@@ -15,6 +15,7 @@
 <script>
 
 import FilmsService from '@/services/FilmsService'
+import { formatarData } from '@/helpers'
 
 export default {
   name: 'FilmeDetalhes',
@@ -23,6 +24,9 @@ export default {
       filme: null,
       filmeImagem: null
     }
+  },
+  methods: {
+    formatarData
   },
   async created() {
     var service = new FilmsService()

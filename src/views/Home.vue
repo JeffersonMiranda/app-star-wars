@@ -44,7 +44,7 @@ export default {
       var response = await service.getAllFilms()
       this.filmes = response.data.results
     } catch(error) {
-      console.log(error)
+      alert('Não foi possível conectar ao servidor, tente mais tarde!')
     }
   }
 }

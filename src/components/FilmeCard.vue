@@ -4,17 +4,21 @@
       <img :src="getFilmeImagem(episode_id)" :alt="title">
     </div>
     <h1 class="filme-titulo"> {{ title }} </h1>
-    <span class="filme-lancamento"> Lançamento: {{ release_date }} </span>
+    <span class="filme-lancamento"> Lançamento: {{ formatarData(release_date) }} </span>
     <router-link class="filme-detalhes" :to="{ name: 'FilmeDetalhes', params: { id: episode_id } }">  Detalhes </router-link>
   </div>
 </template>
 
 <script>
 
+import FilmsService from '@/services/FilmsService'
+import { formatarData } from '@/helpers'
+
 export default {
   name: 'FilmeCard',
   props: ['episode_id', 'title', 'release_date'],
   methods: {
+    formatarData: formatarData,
     getFilmeImagem(episodio) {
       return require('@/assets/covers/' + episodio + '.jpeg')
     }
