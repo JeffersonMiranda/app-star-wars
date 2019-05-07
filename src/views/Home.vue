@@ -1,10 +1,13 @@
 <template>
   <div class="home">
     <input v-model="filmeSelecionado" class="filme-filtro" type="text">
-    <filme-card v-for="filme in filmes"
+    <div class="filmes-cards">
+
+      <filme-card v-for="filme in filmes"
               :episode_id="filme.episode_id"
               :title="filme.title"
               :release_date="filme.release_date"/>
+    </div>
   </div>
 </template>
 
@@ -43,8 +46,15 @@ export default {
     margin: auto;
 
     .filme-filtro {
-      margin: auto auto 20px;
+      display: block;
       width: 100%;
+      max-width: 400px;
+      margin: auto auto 20px;
+    }
+
+    .filmes-cards {
+      display: flex;
+      flex-wrap: wrap;
     }
   }
 

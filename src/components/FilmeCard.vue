@@ -30,7 +30,7 @@ export default {
     flex-direction: column;
     align-items: center;
     padding: 10px;
-    max-width: 350px;
+    max-width: 320px;
     margin: auto auto 20px;
     border-radius: 10px;
     background-color: #272626;
