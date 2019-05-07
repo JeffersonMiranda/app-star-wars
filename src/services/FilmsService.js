@@ -13,4 +13,12 @@ export default class FilmsService {
   async getFilmeById(episode_id) {
     return this.http.request('films/' + episode_id)
   }
+
+  getFilmeImagem(episodio) {
+    return require('@/assets/covers/' + episodio + '.jpeg')
+  }
+
+  getFilmeImagemDetalhe(episodio) {
+    return require('@/assets/covers/detalhes/' + episodio + '.jpeg')
+  }
 }
